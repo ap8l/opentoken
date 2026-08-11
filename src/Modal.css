@@ -5,6 +5,7 @@
   display: grid;
   place-items: center;
   padding: 20px;
+  overflow-y: auto;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(5px);
 }
@@ -79,7 +80,7 @@
   margin: 0;
   color: var(--text, #f1f4f1);
   font-size: 27px;
-  font-weight: 580;
+  font-weight: 600;
   line-height: 1.2;
   letter-spacing: -0.04em;
 }
@@ -127,7 +128,8 @@
 
 .accountForm input:focus {
   border-color: #4a574c;
-  box-shadow: 0 0 0 3px rgba(101, 231, 137, 0.06);
+  box-shadow:
+    0 0 0 3px rgba(101, 231, 137, 0.06);
 }
 
 .accountSubmit {
@@ -155,11 +157,19 @@
   cursor: default;
 }
 
-.modalNotice {
+.modalNotice,
+.modalError {
   margin: 13px 0 0;
-  color: var(--green, #65e789);
   font-size: 10px;
   line-height: 1.5;
+}
+
+.modalNotice {
+  color: var(--green, #65e789);
+}
+
+.modalError {
+  color: var(--error, #ff9292);
 }
 
 .modalPrivacy {
@@ -169,15 +179,22 @@
   line-height: 1.5;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .modalBackdrop {
-    align-items: end;
-    padding: 10px;
+    place-items: start center;
+    padding:
+      calc(env(safe-area-inset-top, 0px) + 52px)
+      12px
+      20px;
+    overscroll-behavior: contain;
   }
 
   .accountModal {
-    width: 100%;
-    border-radius: 17px;
+    width: min(430px, 100%);
+    max-height: calc(100dvh - 80px);
+    margin: 0;
+    overflow-y: auto;
+    border-radius: 16px;
   }
 
   .modalContent {
@@ -197,6 +214,10 @@
   .modalDescription {
     margin-bottom: 21px;
     font-size: 11px;
+  }
+
+  .accountForm input {
+    font-size: 16px;
   }
 }
 
