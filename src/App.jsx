@@ -89,6 +89,7 @@ export default function App() {
       if (!textarea) return;
 
       textarea.focus();
+
       textarea.setSelectionRange(
         textarea.value.length,
         textarea.value.length,
@@ -323,7 +324,9 @@ export default function App() {
                   <div className="messageText">
                     {message.content ? (
                       message.role === "assistant"
-                        ? formatMessage(message.content)
+                        ? formatMessage(
+                            message.content,
+                          )
                         : message.content
                     ) : (
                       <span
@@ -383,6 +386,7 @@ export default function App() {
             aria-label="Message OpenToken"
             maxLength={4000}
             rows={1}
+            enterKeyHint="send"
             disabled={isLoading}
           />
 
