@@ -435,33 +435,40 @@ button {
   color: #3e4640;
 }
 
-/* Mobile */
-
 @media (max-width: 650px) {
   .header {
     height: 58px;
     flex-basis: 58px;
-    padding: 0 14px;
+    padding: 0 12px;
   }
 
   .brandLogo {
-    width: 28px;
-    height: 28px;
+    width: 27px;
+    height: 27px;
+  }
+
+  .brandName {
+    font-size: 14px;
+  }
+
+  .headerActions {
+    gap: 6px;
   }
 
   .clearButton,
   .updatesButton {
     height: 32px;
-    padding: 0 10px;
+    padding: 0 9px;
     font-size: 10px;
   }
 
   .welcome {
-    padding-bottom: 205px;
+    width: calc(100% - 28px);
+    padding-bottom: 245px;
   }
 
   .welcome h1 {
-    font-size: 32px;
+    font-size: 31px;
   }
 
   .description {
@@ -472,6 +479,7 @@ button {
   .messages {
     width: calc(100% - 28px);
     padding-top: 16px;
+    padding-bottom: 165px;
   }
 
   .message {
@@ -488,36 +496,36 @@ button {
   }
 
   .suggestions {
-    justify-content: flex-start;
-    overflow-x: auto;
-    scrollbar-width: none;
-  }
-
-  .suggestions::-webkit-scrollbar {
-    display: none;
+    width: max-content;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+    gap: 6px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow: visible;
   }
 
   .suggestions button {
-    flex: 0 0 auto;
-  }
-}
-
-@media (max-width: 410px) {
-  .clearButton {
-    display: none;
+    width: auto;
+    max-width: 100%;
+    flex: none;
+    padding: 0 10px;
+    font-size: 9px;
   }
 
-  .footer > span:first-child,
-  .footerDivider {
-    display: none;
+  .suggestions button:first-child {
+    grid-column: 1 / -1;
+    justify-self: center;
   }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+  .composer textarea {
+    font-size: 16px;
+  }
+
+  .footer {
+    display: flex;
+    font-size: 9px;
   }
 }
