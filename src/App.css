@@ -496,17 +496,17 @@ button {
   }
 
   .suggestions {
-    width: max-content;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: max-content max-content;
-    justify-content: center;
-    gap: 6px;
-    margin-right: auto;
-    margin-left: auto;
-    overflow: visible;
-  }
-
+  width: max-content;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: max-content max-content;
+  justify-content: start;
+  gap: 6px;
+  margin-right: auto;
+  margin-left: 0;
+  overflow: visible;
+}
+  
   .suggestions button {
     width: auto;
     max-width: 100%;
@@ -517,7 +517,7 @@ button {
 
   .suggestions button:first-child {
     grid-column: 1 / -1;
-    justify-self: center;
+    justify-self: start;
   }
 
   .composer textarea {
