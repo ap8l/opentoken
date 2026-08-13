@@ -145,7 +145,7 @@ a {
   display: block;
   width: 100%;
   max-width: 100%;
-  height: 480px;
+  height: 540px;
   margin: 0;
   padding: 0;
   border: 0;
@@ -270,7 +270,7 @@ a {
 
   .newsletter-section iframe {
     width: 100%;
-    height: 480px;
+    height: 540px;
   }
 
   .opentoken-callout {
