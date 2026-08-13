@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #111411;
+  color: #e8ece9;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+}
+
+/* Header */
+
+.site-header {
+  width: 100%;
+  background: #151915;
+  border-bottom: 1px solid #262d27;
+}
+
+.header-inner {
+  width: min(1100px, calc(100% - 40px));
+  height: 68px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo {
+  display: block;
+  height: 34px;
+  width: auto;
+}
+
+.header-link {
+  color: #a7b0a9;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.header-link:hover {
+  color: #7ed99d;
+}
+
+/* Article */
+
+.article-container {
+  width: min(760px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 64px 0 80px;
+}
+
+.article-category {
+  margin: 0 0 12px;
+  color: #64c985;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.article-container h1 {
+  margin: 0 0 20px;
+  color: #f5f7f5;
+  font-size: clamp(36px, 6vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.article-description {
+  margin: 0 0 48px;
+  color: #aab2ac;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.article-container h2 {
+  margin: 52px 0 16px;
+  color: #eef2ef;
+  font-size: 28px;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+.article-container h3 {
+  margin: 32px 0 10px;
+  color: #dce2dd;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.article-container p {
+  margin: 0 0 20px;
+  color: #b9c1bb;
+  font-size: 17px;
+}
+
+.article-container strong {
+  color: #f0f4f1;
+}
+
+.article-container a {
+  color: #7ed99d;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.article-container a:hover {
+  color: #9be8b3;
+}
+
+/* Newsletter */
+
+.newsletter-section {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+}
+
+.newsletter-section iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 480px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  overflow: hidden;
+}
+
+/* OpenToken promotion */
+
+.opentoken-callout {
+  margin: 52px 0;
+  padding: 28px;
+  background: #171c18;
+  border: 1px solid #2b352d;
+  border-radius: 12px;
+}
+
+.opentoken-callout h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.opentoken-callout p {
+  margin: 0 0 18px;
+  color: #b7c0b9;
+}
+
+.opentoken-button {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #2d8f52;
+  color: #ffffff !important;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none !important;
+}
+
+.opentoken-button:hover {
+  background: #369e5f;
+}
+
+/* Footer */
+
+.site-footer {
+  background: #0d100e;
+  color: #ffffff;
+  border-top: 1px solid #222822;
+}
+
+.footer-inner {
+  width: min(1100px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 42px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-brand strong {
+  font-size: 16px;
+}
+
+.footer-brand p {
+  margin: 0;
+  color: #8e9890;
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 22px;
+}
+
+.footer-links a {
+  color: #b6beb8;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+/* Mobile */
+
+@media (max-width: 640px) {
+  .header-inner {
+    width: min(100% - 28px, 1100px);
+  }
+
+  .article-container {
+    width: min(100% - 32px, 760px);
+    padding: 44px 0 60px;
+  }
+
+  .article-container h1 {
+    font-size: 38px;
+  }
+
+  .article-description {
+    font-size: 18px;
+  }
+
+  .article-container h2 {
+    margin-top: 42px;
+    font-size: 25px;
+  }
+
+  .newsletter-section {
+    margin: 0;
+    padding: 0;
+  }
+
+  .newsletter-section iframe {
+    width: 100%;
+    height: 480px;
+  }
+
+  .opentoken-callout {
+    padding: 22px;
+  }
+
+  .footer-inner {
+    width: min(100% - 32px, 1100px);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
