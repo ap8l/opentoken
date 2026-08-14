@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>OpenToken Articles | AI Guides and Resources</title>
+
+    <meta
+      name="description"
+      content="Browse OpenToken articles and guides about AI tokens, language models, APIs, context windows, pricing, and practical AI development."
+    />
+
+    <meta name="author" content="OpenToken" />
+    <meta name="robots" content="index, follow" />
+
+    <link
+      rel="canonical"
+      href="https://opentoken.website/all-articles"
+    />
+
+    <link rel="icon" href="/favicon.png" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="OpenToken" />
+    <meta
+      property="og:title"
+      content="OpenToken Articles | AI Guides and Resources"
+    />
+    <meta
+      property="og:description"
+      content="Browse OpenToken guides and articles about AI tokens, APIs, language models, context windows, and AI development."
+    />
+    <meta
+      property="og:url"
+      content="https://opentoken.website/all-articles"
+    />
+
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="OpenToken Articles | AI Guides and Resources"
+    />
+    <meta
+      name="twitter:description"
+      content="Browse OpenToken guides and resources about AI and language models."
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        color-scheme: dark;
+        font-family:
+          Inter,
+          ui-sans-serif,
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+
+        --background: #0d100e;
+        --surface: #171b18;
+        --surface-hover: #1d221e;
+        --border: #29302b;
+        --text: #f1f4f1;
+        --muted: #8f9891;
+        --faint: #626b64;
+        --green: #65e789;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        min-width: 320px;
+        min-height: 100vh;
+        margin: 0;
+        background:
+          radial-gradient(
+            circle at 50% 0%,
+            #151a16 0,
+            transparent 38%
+          ),
+          var(--background);
+        color: var(--text);
+        -webkit-font-smoothing: antialiased;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Header */
+
+      .header {
+        height: 62px;
+        flex: 0 0 62px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 22px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        color: var(--text);
+        text-decoration: none;
+      }
+
+      .brand img {
+        width: 30px;
+        height: 30px;
+        display: block;
+      }
+
+      .brand span {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: -0.03em;
+      }
+
+      .homeLink {
+        color: var(--muted);
+        font-size: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 150ms ease;
+      }
+
+      .homeLink:hover {
+        color: var(--green);
+      }
+
+      /* Main */
+
+      main {
+        width: min(760px, calc(100% - 40px));
+        flex: 1;
+        margin: 0 auto;
+        padding: 72px 0 90px;
+      }
+
+      .eyebrow {
+        margin: 0 0 10px;
+        color: var(--green);
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        color: var(--text);
+        font-size: clamp(36px, 6vw, 52px);
+        font-weight: 600;
+        line-height: 1.08;
+        letter-spacing: -0.045em;
+      }
+
+      .description {
+        max-width: 570px;
+        margin: 18px 0 48px;
+        color: var(--muted);
+        font-size: 16px;
+        line-height: 1.7;
+      }
+
+      /* Articles */
+
+      .articles {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid var(--border);
+      }
+
+      .articleLink {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+        padding: 24px 2px;
+        border-bottom: 1px solid var(--border);
+        text-decoration: none;
+        transition:
+          padding 150ms ease,
+          background 150ms ease;
+      }
+
+      .articleLink:hover {
+        padding-right: 10px;
+        padding-left: 10px;
+        background: rgba(255, 255, 255, 0.015);
+      }
+
+      .articleContent {
+        min-width: 0;
+      }
+
+      .articleCategory {
+        margin: 0 0 6px;
+        color: var(--green);
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .articleTitle {
+        margin: 0 0 7px;
+        color: #eef2ef;
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.35;
+        letter-spacing: -0.02em;
+      }
+
+      .articleDescription {
+        margin: 0;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      .articleArrow {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 16px;
+        opacity: 0.55;
+        transition:
+          opacity 150ms ease,
+          transform 150ms ease;
+      }
+
+      .articleLink:hover .articleArrow {
+        opacity: 1;
+        transform: translate(2px, -2px);
+      }
+
+      /* Footer */
+
+      .footer {
+        width: min(760px, calc(100% - 40px));
+        margin: 0 auto;
+        padding: 24px 0 34px;
+        border-top: 1px solid var(--border);
+        color: var(--faint);
+        font-size: 10px;
+      }
+
+      /* Mobile */
+
+      @media (max-width: 640px) {
+        .header {
+          height: 58px;
+          flex-basis: 58px;
+          padding: 0 14px;
+        }
+
+        .brand img {
+          width: 27px;
+          height: 27px;
+        }
+
+        .brand span {
+          font-size: 14px;
+        }
+
+        main {
+          width: calc(100% - 30px);
+          padding: 52px 0 70px;
+        }
+
+        h1 {
+          font-size: 38px;
+        }
+
+        .description {
+          margin-bottom: 38px;
+          font-size: 14px;
+        }
+
+        .articleLink {
+          gap: 16px;
+          padding: 20px 0;
+        }
+
+        .articleLink:hover {
+          padding-right: 4px;
+          padding-left: 4px;
+        }
+
+        .articleTitle {
+          font-size: 16px;
+        }
+
+        .articleDescription {
+          font-size: 12px;
+        }
+
+        .footer {
+          width: calc(100% - 30px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header">
+        <a
+          class="brand"
+          href="https://opentoken.website/"
+          aria-label="OpenToken home"
+        >
+          <img
+            src="/logo.png"
+            alt="OpenToken"
+            width="30"
+            height="30"
+          />
+
+          <span>OpenToken</span>
+        </a>
+
+        <a
+          class="homeLink"
+          href="https://opentoken.website/"
+        >
+          Back to OpenToken
+        </a>
+      </header>
+
+      <main>
+        <header>
+          <p class="eyebrow">OpenToken Guides</p>
+
+          <h1>Articles</h1>
+
+          <p class="description">
+            Guides and resources about AI models, tokens,
+            APIs, context windows, pricing, and practical
+            AI development.
+          </p>
+        </header>
+
+        <nav
+          class="articles"
+          aria-label="OpenToken articles"
+        >
+          <a
+            class="articleLink"
+            href="/articles/what-are-ai-tokens"
+          >
+            <div class="articleContent">
+              <p class="articleCategory">
+                AI Guides
+              </p>
+
+              <h2 class="articleTitle">
+                What Are AI Tokens? The Hidden Language
+                and Currency of Generative AI
+              </h2>
+
+              <p class="articleDescription">
+                Learn how AI tokens work, how tokenization
+                processes language, and why tokens affect
+                pricing, context windows, speed, and model
+                performance.
+              </p>
+            </div>
+
+            <img
+              class="articleArrow"
+              src="/external.svg"
+              alt=""
+              aria-hidden="true"
+            />
+          </a>
+
+          <!-- Add future articles here -->
+
+        </nav>
+      </main>
+
+      <footer class="footer">
+        OpenToken — simple access to AI models.
+      </footer>
+    </div>
+  </body>
+</html>

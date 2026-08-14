@@ -529,3 +529,40 @@ button {
     font-size: 9px;
   }
 }
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    color 150ms ease,
+    opacity 150ms ease;
+}
+
+.learnMore:hover {
+  color: var(--green);
+}
+
+.learnMore img {
+  width: 10px;
+  height: 10px;
+  display: block;
+  opacity: 0.7;
+  filter: brightness(0) saturate(100%) invert(61%) sepia(8%)
+    saturate(364%) hue-rotate(84deg) brightness(94%) contrast(90%);
+  transition:
+    opacity 150ms ease,
+    transform 150ms ease,
+    filter 150ms ease;
+}
+
+.learnMore:hover img {
+  opacity: 1;
+  transform: translate(1px, -1px);
+  filter: brightness(0) saturate(100%) invert(84%) sepia(26%)
+    saturate(1087%) hue-rotate(74deg) brightness(98%) contrast(88%);
+}

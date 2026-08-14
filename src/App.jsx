@@ -416,10 +416,23 @@ export default function App() {
         )}
 
         <footer className="footer">
-          <span>
-            Lightweight by design. Free by choice.
-          </span>
-        </footer>
+        <span>
+          Lightweight by design. Free by choice.
+        </span>
+
+        <a
+          className="learnMore"
+          href="/all-articles.html"
+        >
+          <span>Learn More</span>
+
+          <img
+            src="/external.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </a>
+      </footer>
       </section>
 
       {emailOpen && (
